@@ -1,6 +1,6 @@
 module azrb
 
-go 1.22.5
+go 1.22
 
 require (
 	github.com/spf13/cobra v1.3.0

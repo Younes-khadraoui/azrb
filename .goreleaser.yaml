@@ -1,7 +1,15 @@
+# This is an example .goreleaser.yml file with some sensible defaults.
+# Make sure to check the documentation at https://goreleaser.com
+
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+
+version: 2
+
 before:
   hooks:
     - go mod tidy
     - go mod download
+    - go generate ./...
 
 builds:
   - id: linux
@@ -34,6 +42,7 @@ archives:
       - linux
       - darwin
       - windows
+    format: tar.gz
     format_overrides:
       - goos: windows
         format: zip
@@ -42,8 +51,21 @@ archives:
       - README.md
       - LICENSE
 
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+
 release:
   prerelease: "false"
+  footer: |
+
+    ---
+    
+    Released by [GoReleaser](https://github.com/goreleaser/goreleaser).
 
 checksum:
   name_template: "checksums.txt"
+  algorithm: sha256
