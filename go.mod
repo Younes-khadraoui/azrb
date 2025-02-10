@@ -1,4 +1,4 @@
-module azrb
+module github.com/Younes-khadraoui/azrb
 
 go 1.22
 
