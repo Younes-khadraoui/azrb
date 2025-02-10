@@ -121,13 +121,13 @@ Once installed, you can use azrb with the following commands:
 
 ## Release Process
 
-We follow semantic versioning. **To release version v1.0.0:**
+We follow semantic versioning. **To release version v0.1.0:**
 
 1. **Tag your release**:
 
    ```bash
-   git tag -a v1.0.0 -m "Release version v1.0.0"
-   git push origin v1.0.0
+   git tag -a v0.1.0 -m "Release version v0.1.0"
+   git push origin v0.1.0
    ```
 
 2. **Run GoReleaser**:  
@@ -137,7 +137,7 @@ We follow semantic versioning. **To release version v1.0.0:**
    goreleaser release --clean
    ```
 
-   GoReleaser will build your CLI tool for Linux, Windows, and macOS, create archives, and publish them to GitHub Releases under version **v1.0.0**.
+   GoReleaser will build your CLI tool for Linux, Windows, and macOS, create archives, and publish them to GitHub Releases under version **v0.1.0**.
 
 ## Automated Builds with GoReleaser
 
