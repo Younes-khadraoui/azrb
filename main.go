@@ -1,8 +1,8 @@
 package main
 
 import (
-	"azrb/cmd"
-	"azrb/config"
+	"github.com/Younes-khadraoui/azrb/cmd"
+	"github.com/Younes-khadraoui/azrb/config"
 )
 
 func main() {

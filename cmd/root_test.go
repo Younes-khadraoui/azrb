@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"azrb/config"
+	"github.com/Younes-khadraoui/azrb/config"
 )
 
 func TestViewCommand(t *testing.T) {

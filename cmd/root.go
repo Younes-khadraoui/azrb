@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"azrb/config"
+	"github.com/Younes-khadraoui/azrb/config"
 
 	"github.com/spf13/cobra"
 )
