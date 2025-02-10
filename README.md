@@ -134,7 +134,7 @@ We follow semantic versioning. **To release version v1.0.0:**
    With your tag in place and your `.goreleaser.yml` configured, run:
 
    ```bash
-   goreleaser release --rm-dist
+   goreleaser release --clean
    ```
 
    GoReleaser will build your CLI tool for Linux, Windows, and macOS, create archives, and publish them to GitHub Releases under version **v1.0.0**.
