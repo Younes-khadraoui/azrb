@@ -22,7 +22,6 @@ azrb
 /vendor/
 
 # Dependency modules
-/go.sum
 /go.work.sum
 
 # Editor/IDE files
