@@ -1,0 +1,45 @@
+# Binaries
+azrb
+*.exe
+*.out
+*.app
+
+# Build directories
+/dist/
+/bin/
+/obj/
+/release/
+/coverage/
+
+# Go-related files
+*.log
+*.lock
+*.cache
+*.test
+*.tmp
+
+# Vendor directory (if using `go mod vendor`)
+/vendor/
+
+# Dependency modules
+/go.sum
+/go.work.sum
+
+# Editor/IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# GoReleaser artifacts
+/builds/
+/dist/
+/*.tar.gz
+/*.zip
+/*.deb
+/*.rpm
+
+azrb-darwin-amd64
+azrb-linux-amd64

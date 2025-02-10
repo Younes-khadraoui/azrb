@@ -1,0 +1,49 @@
+before:
+  hooks:
+    - go mod tidy
+    - go mod download
+
+builds:
+  - id: linux
+    main: ./cmd
+    binary: azrb
+    goos:
+      - linux
+    goarch:
+      - amd64
+  - id: windows
+    main: ./cmd
+    binary: azrb
+    goos:
+      - windows
+    goarch:
+      - amd64
+    env:
+      - CGO_ENABLED=0
+  - id: darwin
+    main: ./cmd
+    binary: azrb
+    goos:
+      - darwin
+    goarch:
+      - amd64
+
+archives:
+  - id: default
+    builds:
+      - linux
+      - darwin
+      - windows
+    format_overrides:
+      - goos: windows
+        format: zip
+    wrap_in_directory: true
+    files:
+      - README.md
+      - LICENSE
+
+release:
+  prerelease: "false"
+
+checksum:
+  name_template: "checksums.txt"
