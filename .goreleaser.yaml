@@ -13,14 +13,14 @@ before:
 
 builds:
   - id: linux
-    main: ./cmd
+    main: ./main.go
     binary: azrb
     goos:
       - linux
     goarch:
       - amd64
   - id: windows
-    main: ./cmd
+    main: ./main.go
     binary: azrb
     goos:
       - windows
@@ -29,7 +29,7 @@ builds:
     env:
       - CGO_ENABLED=0
   - id: darwin
-    main: ./cmd
+    main: ./main.go
     binary: azrb
     goos:
       - darwin
